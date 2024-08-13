@@ -1,0 +1,425 @@
+/*Elementos de la página*/
+body{
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  padding-top: 9em;
+  background-image: linear-gradient(rgba(2,2,2,0.5), rgba(2,2,2,0.5)), url(../img/cover.png);
+  background-size: cover;
+}
+header{
+  width: 100%;
+  background: black;
+  border-bottom: solid white 3px;
+  border-radius: 5px;
+  animation: neon-gloww 5s ease-in-out infinite alternate;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+.row{
+  margin-bottom: 0px !important;
+}
+h1{
+  font-size: 1.5em !important;
+}
+h2{
+  font-family: 'Foldit', cursive;
+  color: #fff;
+  font-size: 2em !important;
+  text-shadow: 0 0 40px #fff,
+               0 0 70px #fff,
+               0 0 80px #fff,
+               0 0 100px #fff,
+               0 0 150px #fff;
+}
+.header-menu{
+  margin:2.8rem 0 1.68rem 0;
+}
+#phrase{
+  font-size: 4em;
+  font-family: 'Pacifico', cursive;
+  color: #333;
+  text-align: center;
+  animation: neon-glows 5s ease-in-out infinite alternate;
+}
+.parrafo{
+  font-family: 'Foldit', cursive;
+  color: #fff;
+  font-size: 1em !important;
+}
+
+.footerlogo{
+  margin-top: 20px;
+  max-width: 20px;
+}
+
+.footer{
+  width: 100%;
+  color: white;
+  align-items: center;
+  padding: 10px;
+}
+
+.floating-image {
+  animation: spin 2s linear infinite;
+  max-width: 2em;
+}
+.bg-black{
+  background:black;
+}
+.background-stars{
+  background-image: url(../img/background-stars.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height:30em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.background-map{
+  background-image: url(../img/map.png);
+  background-repeat: repeat;
+  min-height:35em;
+  background-position: center;
+  background-color: white;
+  border-top: solid 1em #355;
+  border-bottom: solid 1em #355;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-custom{
+  border-radius: 45px !important;
+  border-top: solid 3px;
+  animation: neon-gloww 9s ease-in-out infinite alternate;
+  background: linear-gradient(-5deg, #111, #300, #222);
+}
+.card-custom2{
+  border-radius: 45px !important;
+  border-top: solid 3px;
+  animation: neon-gloww 9s ease-in-out infinite alternate;
+  background: linear-gradient(5deg, #111, #510, #222);
+}
+
+
+
+/*Animaciones - Bordes */
+
+
+
+/*FONDO BRILLOS*/
+
+
+.snowflake {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #aaa;
+  position: relative;
+  animation: brillo 2s infinite;
+}
+
+@-webkit-keyframes brillo {
+  0% {
+    box-shadow: 0 0 5px #aaa;
+  }
+  50% {
+    box-shadow: 0 0 20px #aaa;
+  }
+  100% {
+    box-shadow: 0 0 5px #aaa;
+  }
+}
+
+  
+  @-webkit-keyframes snowflakes-fall {
+    0% { top: 100% }
+    100% { top: -10% }
+  }
+  
+  @-webkit-keyframes snowflakes-shake {
+    0% { -webkit-transform: translateX(0px); transform: translateX(0px) }
+    50% { -webkit-transform: translateX(80px); transform: translateX(80px) }
+    100% { -webkit-transform: translateX(0px); transform: translateX(0px) }
+  }
+  
+  @keyframes snowflakes-fall {
+    0% { top: 100% }
+    100% { top: -10% }
+  }
+  
+  @keyframes snowflakes-shake {
+    0% { transform: translateX(0px) }
+    50% { transform: translateX(80px) }
+    100% { transform: translateX(0px) }
+  }
+  
+  .snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake, brillo;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake, brillo;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+  }
+  
+  .snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, .5s;
+  animation-delay: 6s, .5s;
+}
+
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+
+/*Brillos Neon*/
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100&display=swapp');
+
+.neon {
+  font-family: 'Foldit', cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px #00ffff,
+               0 0 20px #00ffff,
+               0 0 30px #00ffff,
+               0 0 40px #00bfff,
+               0 0 70px #00bfff,
+               0 0 80px #00bfff,
+               0 0 100px #00bfff,
+               0 0 150px #00bfff;
+    animation: neon-glow 10s ease-in-out infinite alternate,
+             neon-flicker 6s linear infinite;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 10px #00ffff,
+                 0 0 20px #00ffff,
+                 0 0 30px #00ffff,
+                 0 0 40px #00bfff,
+                 0 0 70px #00bfff,
+                 0 0 80px #00bfff,
+                 0 0 100px #00bfff,
+                 0 0 150px #00bfff;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #00ffff,
+                 0 0 30px #00ffff,
+                 0 0 40px #00ffff,
+                 0 0 50px #00bfff,
+                 0 0 80px #00bfff,
+                 0 0 90px #00bfff,
+                 0 0 110px #00bfff,
+                 0 0 160px #00bfff;
+  }
+}
+@keyframes neon-glows {
+    from {
+      text-shadow: 0 0 10px #ffd700,
+                   0 0 20px #ffd700,
+                   0 0 30px #ffd700,
+                   0 0 40px #ffd700
+  }
+
+  to {
+      text-shadow: 0 0 20px #ffd700,
+                   0 0 30px #ffd700,
+                   0 0 40px #ffd700,
+                   0 0 50px #ffd700
+  }
+
+}
+
+.neon-white {
+  font-family: 'Foldit', cursive;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px #fff,
+               0 0 70px #fff,
+               0 0 80px #fff,
+               0 0 100px #fff,
+               0 0 150px #fff;
+    animation: neon-glow-white .5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow-white {
+  from {
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 30px #fff,
+                 0 0 40px #fff,
+                 0 0 70px #fff,
+                 0 0 80px #fff,
+                 0 0 100px #fff,
+                 0 0 150px #fff;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff,
+                 0 0 30px #fff,
+                 0 0 40px #fff,
+                 0 0 50px #fff,
+                 0 0 80px #fff,
+                 0 0 90px #fff,
+                 0 0 110px #fff,
+                 0 0 160px #fff;
+  }
+}
+/* Animación del parpadeo del efecto neon */
+@keyframes neon-flicker {
+  0% {
+    opacity: 1;
+  }
+  
+  5% {
+    opacity: 0.5;
+  }
+  
+  10% {
+    opacity: 1;
+  }
+  
+  15% {
+    opacity: 0.5;
+  }
+  
+  20% {
+    opacity: 1;
+  }
+  
+  80% {
+    opacity: 1;
+  }
+  
+  85% {
+    opacity: 0.5;
+  }
+  
+  90% {
+    opacity: 1;
+  }
+  
+  95% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+/*BORDE NEON*/
+.neon-border {
+      border-top: 5px solid;
+      border-radius: 5px;
+      animation: neon-gloww 5s ease-in-out infinite alternate;
+    }
+    
+    @keyframes neon-gloww {
+      0% {
+        border-color: rgb(255, 255, 255);
+      }
+      14.28% {
+        border-color: rgb(240, 240, 240);
+      }
+      28.56% {
+        border-color: rgb(225, 225, 225);
+      }
+      42.84% {
+        border-color: rgb(200, 200, 200);
+      }
+      57.12% {
+        border-color: rgb(40, 40, 40);
+      }
+      71.4% {
+        border-color: rgb(180, 180, 180);
+      }
+      85.68% {
+        border-color: rgb(220, 220, 220);
+      }
+      100% {
+        border-color: rgb(255, 255, 255);
+      }
+    }
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
