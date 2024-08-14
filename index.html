@@ -10,119 +10,40 @@
   
 </head>
 <body>
-<div>
-	<div class="snowflakes" aria-hidden="true">
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	  <div class="snowflake"></div>
-	</div>
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <div class="row">
+            <!-- Columna Izquierda (Ordenador) -->
+            <div class="col s12 m3 l3 left-column">
+			    <div class="card black">
+			        <div class="card-image">
+			            <img src="recursos/img/andre.jpg" alt="Foto de Andre Ortiz">
+			            <span class="card-title white-text">Andre Ortiz Loyola Castañeda</span>
+			            <span class="card-title red-text">DESARROLLADOR WEB FULL STACK</span>
+			        </div>
+			        <div class="card-content white-text">
+			            <p>Email: <a href="mailto:andreortiz11@hotmail.com" class="blue-text text-lighten-2">andreortiz11@hotmail.com</a></p>
+			            <p>Ubicación: Mérida, Yucatán, México</p>
+			        </div>
+			    </div>
+			</div>
+            
+            <!-- Contenido Principal -->
+           <div class="col s12 m9 l9 main-content">
+			    <section id="acerca-de-mi">
+			        <h2 class="red-text">Acerca de mí</h2>
+			        <p class="white-text">
+			             Soy una persona alegre y de mente abierta, dispuesto a aprender cosas nuevas, perseverante, con un gran espíritu de liderazgo y dispuesto a ayudar a los que me rodean, comprometido con la calidad de mi trabajo, buscando siempre la accesibilidad e inclusión para marcar huella.
+			        </p>
+			    </section>
+			    <!-- Se pueden agregar más secciones aquí -->
+			</div>
+        </div>
+    </div>
 
-
-	<header class="row hide-on-small-only">
-		<div class="col s3 l2">
-			<center><img src="recursos/img/andre.jpg" style="max-width:5em; border-radius: 20px; margin-top:1em;"></center>
-		</div>
-		<div class="col l3">
-			<h1 class="neon">Andre Ortiz Loyola Castañeda</h1>
-			<h2 class="neon">Desarrollador Fullstack</h2>
-		</div>
-		<div class="col l7 center-align">
-			<p class="neon-white header-menu"><a href="mailto:andreortiz11@hotmail.com">andreortiz11@hotmail.com</a></p>
-			<!--<p class="neon-white"> Contacto | Habilidades | Idiomas | Proyectos personales</p>-->
-		</div>
-	</header>
-	<header class="row hide-on-large-only">
-		<div class="col s3 l2">
-			<center><img src="recursos/img/andre.jpg" style="max-width:5em; border-radius: 20px; margin-top:1em;"></center>
-		</div>
-		<div class="col s8" style="margin: 0px">
-			<h1 class="neon">Lic. Andre Ortiz Loyola Castañeda</h1>
-		</div>
-		<div class="col s12 center-align" style="margin: 0px">
-			<p class="neon-white"><a href="mailto:andreortiz11@hotmail.com">andreortiz11@hotmail.com</a></p>
-			<!--<p class="neon-white"> Contacto | Habilidades | Idiomas | Proyectos personales</p>-->
-		</div>
-	</header>
-
-
-	 
-	<div class="row background-map">
-		<div class="col s12 l12">
-			<p id="phrase"></p>
-		</div>
-	</div>
-
-<script>
-	    document.addEventListener("DOMContentLoaded", function() {
-	      var phrases = [
-	        "Somos polvo de estrellas",
-	        "We are stardust", 
-	        "Nous sommes poussière d'étoiles", 
-	        "Nemi ixtlachihualoyan", 
-	        "Kaambal k'uul u xook", 
-	        "Είμαστε σκόνη αστεριών", 
-	        "我们是星尘", 
-	        "私たちは星の塵です", 
-	        "Siamo polvere di stelle", 
-	        "Somos pó de estrelas"
-	      ];
-
-	      var index = 0;
-	      var phraseElement = document.getElementById("phrase");
-
-	      setInterval(function() {
-	        index = (index + 1) % phrases.length;
-	        phraseElement.textContent = phrases[index];
-	      }, 3000);
-	    });
-	  </script>
-
-
-	<div class="row background-stars">
-		<div class="col s12 l5">
-			<div class="card black card-custom">
-		        <div class="card-content white-text">
-		          <span class="card-title">Acerca de mi:</span>
-		          <p class="parrafo">Soy una persona entusiasta, proactiva y de mente abierta, con facilidad para el aprendizaje y un gran espíritu de liderazgo. Siempre dispuesto a compartir mis conocimientos y auxiliar a quien lo necesite. Comprometido con la excelencia, calidad, inclusión y accesibilidad en mi profesión, además de la búsqueda constante de mejora.</p>
-		        </div>
-		        <div class="card-action">
-		        	<center><img src="recursos/img/keyblade-w.png" class="floating-image"></center>
-		        </div>
-		    </div>
-		</div>
-		<div class="col s12 l5 offset-l7 right-align">
-			<div class="card black card-custom2">
-		        <div class="card-content white-text">
-		          <span class="card-title">Educación:</span>
-		          <p class="parrafo"> 2014 - 2018 | <b>Universidad Nacional Autónoma de México (CU)</b> 
-					<br>Licenciado en Informática. <b>(Cédula 12300855)</b></p>
-					<br>
-					<p class="parrafo">2019 | <b>Softtek México</b> 
-					<br>Curso de Garantía de la Calidad QA</p>
-				</div>
-		        <div class="card-action">
-		        	<center><img src="recursos/img/crown-w.png" class="floating-image">></center>
-		        </div>
-		    </div>
-		</div>
-	</div>
-
-
-
-
-
-	<div class="nav-wrapper neon-border footer">
-		<a href="https://www.linkedin.com/in/andre-ortiz-loyola-casta%C3%B1eda-2ab4ba197/"><img src="recursos/img/linkedin-logo.png" class="footerlogo"> LinkedIn | Andre Ortiz Loyola Castañeda </a>
-	</div>
-</div>
-
+    <!-- Scripts
+    <script src="/recursos/js/materialize.min.js"></script>
+    <script src="/recursos/js/main.js"></script>-->
 
 </body>
 </html>
