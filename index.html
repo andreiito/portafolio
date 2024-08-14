@@ -3,6 +3,7 @@
 <head>
 	<title>Andre Ortiz Loyola Castañeda | Portafolio </title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="recursos/css/main.css">
 	<link rel="stylesheet" type="text/css" href="recursos/css/materialize.css"> 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,34 +12,29 @@
 </head>
 <body>
     <!-- Contenedor Principal -->
-    <div class="container">
-        <div class="row">
-            <!-- Columna Izquierda (Ordenador) -->
-            <div class="col s12 m3 l3 left-column">
-			    <div class="card black">
-			        <div class="card-image">
-			            <img src="recursos/img/andre.jpg" alt="Foto de Andre Ortiz">
-			            <span class="card-title white-text">Andre Ortiz Loyola Castañeda</span>
-			            <span class="card-title red-text">DESARROLLADOR WEB FULL STACK</span>
-			        </div>
-			        <div class="card-content white-text">
-			            <p>Email: <a href="mailto:andreortiz11@hotmail.com" class="blue-text text-lighten-2">andreortiz11@hotmail.com</a></p>
-			            <p>Ubicación: Mérida, Yucatán, México</p>
-			        </div>
-			    </div>
-			</div>
+     <div class="row no-gutters">
+        <!-- Columna Izquierda (Ordenador) / Banner Superior (Móviles) -->
+        <aside class="col s12 m3 l3 left-column top-banner">
+            <div class="banner-content">
+                <img src="/recursos/img/foto.jpg" alt="Foto de Andre Ortiz">
+                <h1 class="white-text">Andre Ortiz Loyola</h1>
+                <h2 class="red-text">DESARROLLADOR WEB FULL STACK</h2>
+                <p>Email: <a href="mailto:andre@example.com" class="blue-text text-lighten-2">andre@example.com</a></p>
+                <p>Tel: <a href="tel:+1234567890" class="blue-text text-lighten-2">+123 456 7890</a></p>
+                <p>Ubicación: Ciudad de México, MX</p>
+            </div>
+        </aside>
             
             <!-- Contenido Principal -->
-           <div class="col s12 m9 l9 main-content">
-			    <section id="acerca-de-mi">
-			        <h2 class="red-text">Acerca de mí</h2>
-			        <p class="white-text">
+            <main class="col s12 m9 l9 main-content">
+            <section id="acerca-de-mi">
+                <h2 class="red-text">Acerca de mí</h2>
+                <p class="white-text">
 			             Soy una persona alegre y de mente abierta, dispuesto a aprender cosas nuevas, perseverante, con un gran espíritu de liderazgo y dispuesto a ayudar a los que me rodean, comprometido con la calidad de mi trabajo, buscando siempre la accesibilidad e inclusión para marcar huella.
 			        </p>
-			    </section>
-			    <!-- Se pueden agregar más secciones aquí -->
-			</div>
-        </div>
+			   </section>
+            <!-- Más secciones de contenido -->
+        </main>
     </div>
 
     <!-- Scripts

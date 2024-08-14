@@ -1,29 +1,66 @@
-/*Elementos de la página*/
 /* main.css */
 
-/* Fondo negro para la columna izquierda y el banner superior */
+/* Restablecer márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner Superior / Columna Izquierda */
 .left-column {
     background-color: #000;
     color: #fff;
+    height: 100vh; /* Ocupa toda la altura de la pantalla en ordenadores */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.left-column .card-title {
+.left-column img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.left-column h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.left-column h2 {
     font-size: 24px;
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
-.left-column .card-content a {
-    color: #00bcd4; /* Azul celeste */
-}
-
-.left-column .card-content p {
+.left-column p {
+    font-size: 16px;
     margin: 5px 0;
 }
 
-/* Estilo para el contenido principal */
+/* Ajustes de Media Query para móviles */
+@media only screen and (max-width: 600px) {
+    .left-column {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .main-content {
+        padding-top: 120px; /* Espacio para el banner superior en móviles */
+    }
+}
+
+/* Contenido Principal */
 .main-content {
     background-color: #121212; /* Fondo oscuro para un look futurista */
     padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 /* Títulos */
@@ -36,33 +73,4 @@ h2 {
 p {
     font-size: 18px;
     line-height: 1.6;
-}
-
-/* Media query para pantallas móviles */
-@media only screen and (max-width: 600px) {
-    .left-column {
-        display: none; /* Oculta la columna en móviles */
-    }
-    .top-banner {
-        display: block;
-        width: 100%;
-        text-align: center;
-        background-color: #000;
-        color: #fff;
-        padding: 10px 0;
-    }
-    
-    .top-banner img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-    
-    .top-banner .card-title {
-        font-size: 20px;
-    }
-    
-    .main-content {
-        padding-top: 120px; /* Ajuste por el banner superior */
-    }
 }
