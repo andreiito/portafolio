@@ -46,8 +46,27 @@
     .left-column {
         width: 100%;
         height: auto;
-        padding: 10px 0;
-        text-align: center;
+        padding: 10px;
+        text-align: left;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .banner-content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .banner-content img {
+        margin-bottom: 0;
+    }
+
+    .banner-content h1, 
+    .banner-content h2, 
+    .banner-content p {
+        margin: 0;
     }
 
     .main-content {
