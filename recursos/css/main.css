@@ -20,25 +20,25 @@
 }
 
 .left-column img {
-    width: 150px;
-    height: 150px;
+    width: 120px; /* Tamaño reducido para móviles */
+    height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
 
 .left-column h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 30px; /* Tamaño reducido para evitar desbordamiento */
+    margin-bottom: 5px;
 }
 
 .left-column h2 {
-    font-size: 24px;
+    font-size: 18px; /* Tamaño reducido para evitar desbordamiento */
     margin-top: 0;
 }
 
 .left-column p {
-    font-size: 16px;
-    margin: 5px 0;
+    font-size: 14px; /* Tamaño reducido para evitar desbordamiento */
+    margin: 2px 0;
 }
 
 /* Ajustes de Media Query para móviles */
@@ -57,6 +57,7 @@
         align-items: center;
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
     }
 
     .banner-content img {
@@ -67,6 +68,21 @@
     .banner-content h2, 
     .banner-content p {
         margin: 0;
+        white-space: nowrap; /* Evita que el texto se corte, pero permite que salte de línea si es necesario */
+        overflow: hidden; 
+        text-overflow: ellipsis; /* Añade "..." si el texto es demasiado largo */
+    }
+
+    .banner-content h1 {
+        font-size: 24px; /* Tamaño ajustado */
+    }
+
+    .banner-content h2 {
+        font-size: 16px; /* Tamaño ajustado */
+    }
+
+    .banner-content p {
+        font-size: 12px; /* Tamaño ajustado */
     }
 
     .main-content {
