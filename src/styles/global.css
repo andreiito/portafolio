@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #060d14;
+    color: #ffffff;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #d79f21;
+    color: #060d14;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060d14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0a587c;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #45819c;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-5xl mx-auto px-6 py-24;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-semibold mb-2 text-white;
+  }
+
+  .section-subtitle {
+    @apply text-mist text-base mb-12 font-body;
+  }
+
+  .section-divider {
+    @apply w-12 h-px bg-stellar mb-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-md
+           bg-stellar text-cosmos font-display font-semibold text-sm
+           hover:bg-yellow-400 transition-colors duration-200
+           animate-pulse-gold;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-md
+           border border-mid text-mist font-display font-medium text-sm
+           hover:border-stellar hover:text-stellar transition-colors duration-200;
+  }
+
+  /* Constellation line — used in timeline */
+  .constellation-line {
+    @apply relative pl-8;
+  }
+  .constellation-line::before {
+    content: '';
+    @apply absolute left-0 top-2 bottom-0 w-px bg-gradient-to-b from-stellar via-mid to-transparent;
+  }
+  .constellation-dot {
+    @apply absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-stellar shadow-[0_0_8px_#d79f21];
+  }
+
+  /* Skill tag */
+  .skill-tag {
+    @apply px-3 py-1 rounded-full text-xs font-mono font-medium
+           border border-mid/40 text-mist bg-deep/20
+           hover:border-stellar hover:text-stellar hover:bg-stellar/10
+           transition-all duration-200 cursor-default;
+  }
+
+  /* Card */
+  .project-card {
+    @apply rounded-xl border border-mid/20 bg-deep/10 backdrop-blur-sm
+           p-6 flex flex-col gap-4
+           hover:border-stellar/50 hover:bg-deep/20
+           transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-stellar to-mist;
+  }
+
+  .glow-stellar {
+    filter: drop-shadow(0 0 12px rgba(215, 159, 33, 0.5));
+  }
+
+  .glow-mid {
+    filter: drop-shadow(0 0 12px rgba(69, 129, 156, 0.4));
+  }
+}

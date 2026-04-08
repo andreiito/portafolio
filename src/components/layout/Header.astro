@@ -1,0 +1,57 @@
+---
+import LanguageToggle from '../ui/LanguageToggle.tsx';
+import type { Lang } from '../../i18n/index';
+import { t } from '../../i18n/index';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Logo / Name -->
+    <a
+      href={lang === 'en' ? '/en' : '/'}
+      class="font-display font-semibold text-white text-sm tracking-wide hover:text-stellar transition-colors"
+    >
+      AOLC<span class="text-stellar">.</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-7">
+      {Object.entries({
+        about:      '#about',
+        experience: '#experience',
+        skills:     '#skills',
+        projects:   '#projects',
+        languages:  '#languages',
+        contact:    '#contact',
+      }).map(([key, href]) => (
+        <a
+          href={href}
+          class="text-mist text-xs font-mono hover:text-stellar transition-colors duration-200"
+        >
+          {tr.nav[key as keyof typeof tr.nav]}
+        </a>
+      ))}
+    </nav>
+
+    <LanguageToggle client:load />
+  </div>
+</header>
+
+<!-- Header scroll effect -->
+<script>
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      header?.classList.add('bg-cosmos/90', 'backdrop-blur-md', 'border-b', 'border-mid/10');
+    } else {
+      header?.classList.remove('bg-cosmos/90', 'backdrop-blur-md', 'border-b', 'border-mid/10');
+    }
+  });
+</script>

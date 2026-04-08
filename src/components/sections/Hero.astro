@@ -1,0 +1,62 @@
+---
+import StarField from '../ui/StarField.tsx';
+import type { Lang } from '../../i18n/index';
+import { t } from '../../i18n/index';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+
+<section id="hero" class="relative min-h-screen flex items-center bg-cosmos overflow-hidden">
+
+  <!-- Star field canvas -->
+  <StarField client:only="react" />
+
+  <!-- Radial glow -->
+  <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(10,88,124,0.18)_0%,transparent_70%)]" />
+
+  <!-- Content -->
+  <div class="relative z-10 section-container flex flex-col gap-6 pt-24">
+
+    <!-- Label -->
+    <span class="text-stellar font-mono text-xs tracking-widest uppercase animate-fade-in">
+      Portfolio
+    </span>
+
+    <!-- Name -->
+    <h1 class="font-display text-5xl md:text-7xl font-bold text-white leading-none animate-fade-up" style="animation-delay: 0.1s; opacity: 0;">
+      Andre<br />
+      <span class="text-gradient">Ortiz Loyola</span>
+    </h1>
+
+    <!-- Role -->
+    <p class="font-mono text-mist text-sm md:text-base tracking-wider animate-fade-up" style="animation-delay: 0.25s; opacity: 0;">
+      {tr.hero.role}
+    </p>
+
+    <!-- Tagline -->
+    <p class="text-white/60 text-lg md:text-xl max-w-lg leading-relaxed animate-fade-up" style="animation-delay: 0.4s; opacity: 0;">
+      {tr.hero.tagline}
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-wrap items-center gap-4 animate-fade-up" style="animation-delay: 0.55s; opacity: 0;">
+      <a href="#projects" class="btn-primary">
+        {tr.hero.cta_work}
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="#contact" class="btn-secondary">
+        {tr.hero.cta_contact}
+      </a>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in" style="animation-delay: 1.2s; opacity: 0;">
+      <span class="text-mist/30 text-xs font-mono">scroll</span>
+      <div class="w-px h-10 bg-gradient-to-b from-stellar/50 to-transparent"></div>
+    </div>
+  </div>
+</section>

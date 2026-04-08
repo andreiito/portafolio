@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero       from '../../components/sections/Hero.astro';
+import About      from '../../components/sections/About.astro';
+import Experience from '../../components/sections/Experience.astro';
+import Skills     from '../../components/sections/Skills.astro';
+import Projects   from '../../components/sections/Projects.astro';
+import Languages  from '../../components/sections/Languages.astro';
+import Contact    from '../../components/sections/Contact.astro';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout
+  lang={lang}
+  title="Andre Ortiz Loyola Castañeda · MarTech & Full Stack Developer"
+  description="Professional portfolio of Andre Ortiz Loyola Castañeda — MarTech & Full Stack Developer. Mérida, México."
+>
+  <Hero       lang={lang} />
+  <About      lang={lang} />
+  <Experience lang={lang} />
+  <Skills     lang={lang} />
+  <Projects   lang={lang} />
+  <Languages  lang={lang} />
+  <Contact    lang={lang} />
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import type { Lang } from '../../i18n/index';
+import { t } from '../../i18n/index';
+import { languages } from '../../content/languages';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+
+<section id="languages" class="bg-cosmos">
+  <div class="section-container">
+
+    <span class="text-stellar font-mono text-xs tracking-widest uppercase">{tr.languages.label}</span>
+    <div class="section-divider mt-3"></div>
+    <h2 class="section-title">{tr.languages.title}</h2>
+
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+      {languages.map((l) => (
+        <div class="p-4 rounded-xl border border-mid/15 bg-deep/5 hover:border-stellar/30 transition-colors duration-200 group">
+          <p class="font-display font-medium text-white text-sm group-hover:text-stellar transition-colors">
+            {l.name[lang]}
+          </p>
+          <p class="text-mist/50 font-mono text-xs mt-1">{l.level[lang]}</p>
+
+          <!-- Level dots -->
+          <div class="flex items-center gap-1 mt-3">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div
+                class={`w-1.5 h-1.5 rounded-full ${
+                  i < l.bars
+                    ? 'bg-stellar shadow-[0_0_4px_#d79f21]'
+                    : 'bg-mid/20'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

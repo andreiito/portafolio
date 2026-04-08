@@ -1,0 +1,82 @@
+---
+import type { Lang } from '../../i18n/index';
+import { t } from '../../i18n/index';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+
+<section id="about" class="bg-cosmos">
+  <div class="section-container">
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: text -->
+      <div>
+        <span class="text-stellar font-mono text-xs tracking-widest uppercase">{tr.about.label}</span>
+        <div class="section-divider mt-3"></div>
+        <h2 class="section-title">{tr.about.title}</h2>
+
+        <p class="text-white/70 leading-relaxed text-base mt-6 max-w-md">
+          {tr.about.bio}
+        </p>
+
+        <p class="text-mist/50 font-mono text-xs mt-6 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          {tr.about.location}
+        </p>
+      </div>
+
+      <!-- Right: quick facts -->
+      <div class="flex flex-col gap-6 pt-2">
+
+        <!-- Education -->
+        <div class="p-5 rounded-xl border border-mid/15 bg-deep/5">
+          <p class="text-stellar font-mono text-xs uppercase tracking-widest mb-3">
+            {lang === 'es' ? 'Educación' : 'Education'}
+          </p>
+          <p class="text-white font-display font-medium text-sm">
+            {lang === 'es' ? 'Licenciatura en Informática' : "Bachelor's in Computer Science"}
+          </p>
+          <p class="text-mist/60 text-xs mt-1 font-mono">UNAM · 2014–2018</p>
+          <p class="text-mist/40 text-xs mt-0.5 font-mono">
+            {lang === 'es' ? 'Cédula Profesional: 12300855' : 'Professional License: 12300855'}
+          </p>
+        </div>
+
+        <!-- Current -->
+        <div class="p-5 rounded-xl border border-stellar/20 bg-stellar/5">
+          <p class="text-stellar font-mono text-xs uppercase tracking-widest mb-3">
+            {lang === 'es' ? 'Actualmente' : 'Currently'}
+          </p>
+          <p class="text-white font-display font-medium text-sm">
+            Marketing Technology Specialist
+          </p>
+          <p class="text-mist/60 text-xs mt-1 font-mono">
+            Lancemos · {lang === 'es' ? '2021 – Presente' : '2021 – Present'}
+          </p>
+          <p class="text-mist/40 text-xs mt-0.5 font-mono">
+            {lang === 'es' ? 'Remoto · Mérida, MX' : 'Remote · Mérida, MX'}
+          </p>
+        </div>
+
+        <!-- Languages preview -->
+        <div class="p-5 rounded-xl border border-mid/15 bg-deep/5">
+          <p class="text-stellar font-mono text-xs uppercase tracking-widest mb-3">
+            {tr.about.languages_label}
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {['Español', 'English', '普通话', 'LSM', 'Italiano', 'Français', '日本語', 'Náhuatl'].map(l => (
+              <span class="text-xs font-mono text-mist/60 border border-mid/20 px-2 py-0.5 rounded-full">
+                {l}
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

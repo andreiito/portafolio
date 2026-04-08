@@ -1,0 +1,67 @@
+---
+import type { Lang } from '../../i18n/index';
+import { t } from '../../i18n/index';
+import { experience } from '../../content/experience';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const tr = t(lang);
+---
+
+<section id="experience" class="bg-cosmos/80">
+  <div class="section-container">
+
+    <span class="text-stellar font-mono text-xs tracking-widest uppercase">{tr.experience.label}</span>
+    <div class="section-divider mt-3"></div>
+    <h2 class="section-title">{tr.experience.title}</h2>
+
+    <div class="mt-10 flex flex-col gap-14">
+      {experience.map((item, i) => (
+        <div class="constellation-line">
+          <div class="constellation-dot" />
+
+          <!-- Company + period -->
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="font-display font-semibold text-white text-lg">{item.company}</h3>
+              <p class="text-stellar text-sm font-mono mt-0.5">{item.role[lang]}</p>
+              {item.badge && (
+                <span class="inline-block mt-2 text-xs font-mono text-mist/50 border border-mid/20 rounded-full px-2.5 py-0.5">
+                  {item.badge}
+                </span>
+              )}
+            </div>
+            <span class="text-mist/40 font-mono text-xs whitespace-nowrap mt-1">{item.period[lang]}</span>
+          </div>
+
+          <!-- Bullets -->
+          <ul class="flex flex-col gap-2.5 mb-6">
+            {item.bullets.map(b => (
+              <li class="flex items-start gap-3 text-white/65 text-sm leading-relaxed">
+                <span class="mt-1.5 w-1 h-1 min-w-[4px] rounded-full bg-mid"></span>
+                {b[lang]}
+              </li>
+            ))}
+          </ul>
+
+          <!-- Own projects (if any) -->
+          {item.ownProjects && item.ownProjects.length > 0 && (
+            <div class="mt-4 p-4 rounded-lg border border-stellar/15 bg-stellar/5">
+              <p class="text-stellar font-mono text-xs uppercase tracking-widest mb-3">
+                {tr.experience.own_projects}
+              </p>
+              <ul class="flex flex-col gap-2">
+                {item.ownProjects.map(p => (
+                  <li class="flex items-start gap-3 text-mist/70 text-xs leading-relaxed">
+                    <span class="mt-1.5 w-1 h-1 min-w-[4px] rounded-full bg-stellar/60"></span>
+                    {p[lang]}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
