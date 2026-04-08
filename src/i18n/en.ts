@@ -17,7 +17,7 @@ export const en = {
   about: {
     label:    'About',
     title:    'The profile',
-    bio: 'MarTech and Full Stack professional based in Mérida, México. Spent 4+ years leading web and automation strategy at one of Latin America\'s top digital marketing agencies — working across CRM migrations, funnel architecture, API integrations, and custom-built tools. Learns new technology by building something with it. Also speaks eight languages, which says something about how his mind works.',
+    bio: 'MarTech and Full Stack professional based in Mérida, México. Currently Lead Marketing Manager at Rentamira, designing AI-driven marketing systems for vacation rental management clients. Previously led web and automation strategy at one of Latin America\'s top digital marketing agencies for 4+ years. Learns new technology by building something with it. Also speaks eight languages, which says something about how his mind works.',
     location: 'Mérida, Yucatán · México',
     languages_label: 'Languages',
   },

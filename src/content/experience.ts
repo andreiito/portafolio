@@ -9,14 +9,51 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
+    company: 'Rentamira',
+    role: {
+      es: 'Lead Marketing Manager',
+      en: 'Lead Marketing Manager',
+    },
+    period: {
+      es: 'Marzo 2026 – Presente · Presencial · Mérida',
+      en: 'March 2026 – Present · On-site · Mérida',
+    },
+    bullets: [
+      {
+        es: 'Lidera la estrategia de marketing para clientes de gestión de renta vacacional: SEO, CRO, paid media, redes sociales y lifecycle marketing.',
+        en: 'Leads marketing strategy for vacation rental management clients across SEO, CRO, paid media, social media, and lifecycle marketing.',
+      },
+      {
+        es: 'Diseña sistemas de operación asistidos por IA para automatizar investigación, producción creativa, testing y reportes de campaña.',
+        en: 'Designs AI-driven operational systems to automate campaign research, creative production, testing frameworks, and reporting.',
+      },
+      {
+        es: 'Gestiona y optimiza campañas de pago en Google Ads y Meta orientadas a performance y conversión.',
+        en: 'Manages and optimizes paid campaigns across Google Ads and Meta with a performance and conversion focus.',
+      },
+      {
+        es: 'Construye y optimiza flujos de email marketing y lifecycle: segmentación, automatización, retención y reactivación.',
+        en: 'Builds and optimizes email marketing and lifecycle flows: segmentation, automation, retention, and reactivation.',
+      },
+      {
+        es: 'Lidera iniciativas de CRO en landing pages y funnels de reservación para múltiples clientes simultáneos.',
+        en: 'Leads CRO initiatives across landing pages and booking funnels for multiple simultaneous client accounts.',
+      },
+      {
+        es: 'Estandariza procesos para reducir ejecución manual y aumentar velocidad, consistencia y escalabilidad.',
+        en: 'Standardizes processes to reduce manual execution and increase speed, consistency, and scalability.',
+      },
+    ],
+  },
+  {
     company: 'Lancemos Marketing Digital',
     role: {
       es: 'Web Manager → Marketing Technology Specialist',
       en: 'Web Manager → Marketing Technology Specialist',
     },
     period: {
-      es: '2021 – Presente · Remoto',
-      en: '2021 – Present · Remote',
+      es: '2021 – Marzo 2026 · Remoto',
+      en: '2021 – March 2026 · Remote',
     },
     badge: 'Top 15 LATAM · Hotmart',
     bullets: [

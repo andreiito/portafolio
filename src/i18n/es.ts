@@ -17,7 +17,7 @@ export const es = {
   about: {
     label:    'Sobre mí',
     title:    'El perfil',
-    bio: 'Profesional de MarTech y desarrollo Full Stack basado en Mérida, México. Durante más de 4 años lideró la estrategia web y de automatización en una de las agencias de marketing digital top en América Latina — trabajando en migraciones de CRM, arquitectura de funnels, integraciones con APIs y herramientas construidas a medida. Aprende tecnología nueva construyendo algo con ella. También habla ocho idiomas, lo que dice algo sobre cómo piensa.',
+    bio: 'Profesional de MarTech y desarrollo Full Stack basado en Mérida, México. Actualmente Lead Marketing Manager en Rentamira, diseñando sistemas de marketing operados con IA para clientes de renta vacacional. Antes lideró el área web y de automatización en una de las agencias top de LATAM durante 4 años. Aprende tecnología nueva construyendo algo con ella. También habla ocho idiomas, lo que dice algo sobre cómo piensa.',
     location: 'Mérida, Yucatán · México',
     languages_label: 'Idiomas',
   },
