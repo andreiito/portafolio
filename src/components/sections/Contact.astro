@@ -33,7 +33,7 @@ const tr = t(lang);
             </svg>
           </div>
           <div>
-            <p class="text-mist/50 font-mono text-xs">{tr.contact.email_label}</p>
+            <p class="text-mist font-mono text-xs">{tr.contact.email_label}</p>
             <p class="text-white font-mono text-sm group-hover:text-stellar transition-colors">oica950624@gmail.com</p>
           </div>
         </a>
@@ -50,7 +50,7 @@ const tr = t(lang);
             </svg>
           </div>
           <div>
-            <p class="text-mist/50 font-mono text-xs">LinkedIn</p>
+            <p class="text-mist font-mono text-xs">LinkedIn</p>
             <p class="text-white font-mono text-sm group-hover:text-stellar transition-colors">Andre Ortiz Loyola Castañeda</p>
           </div>
         </a>
@@ -67,7 +67,7 @@ const tr = t(lang);
             </svg>
           </div>
           <div>
-            <p class="text-mist/50 font-mono text-xs">GitHub</p>
+            <p class="text-mist font-mono text-xs">GitHub</p>
             <p class="text-white font-mono text-sm group-hover:text-stellar transition-colors">andreiito</p>
           </div>
         </a>
@@ -82,31 +82,31 @@ const tr = t(lang);
         class="flex flex-col gap-4"
       >
         <div class="flex flex-col gap-1.5">
-          <label class="text-mist/50 font-mono text-xs">
+          <label class="text-mist font-mono text-xs">
             {lang === 'es' ? 'Nombre' : 'Name'}
           </label>
           <input
             type="text" name="name" required
-            class="bg-deep/10 border border-mid/20 rounded-lg px-4 py-2.5 text-white text-sm
-                   font-body placeholder-mist/25 outline-none
-                   focus:border-stellar/50 focus:bg-stellar/5 transition-all duration-200"
+            class="bg-deep/10 border border-mid rounded-lg px-4 py-2.5 text-white text-sm
+                   font-body placeholder-mist/50 outline-none
+                   focus:border-stellar focus:bg-stellar/5 transition-all duration-200"
             placeholder={lang === 'es' ? 'Tu nombre' : 'Your name'}
           />
         </div>
 
         <div class="flex flex-col gap-1.5">
-          <label class="text-mist/50 font-mono text-xs">Email</label>
+          <label class="text-mist font-mono text-xs">Email</label>
           <input
             type="email" name="email" required
-            class="bg-deep/10 border border-mid/20 rounded-lg px-4 py-2.5 text-white text-sm
-                   font-body placeholder-mist/25 outline-none
-                   focus:border-stellar/50 focus:bg-stellar/5 transition-all duration-200"
+            class="bg-deep/10 border border-mid rounded-lg px-4 py-2.5 text-white text-sm
+                   font-body placeholder-mist/50 outline-none
+                   focus:border-stellar focus:bg-stellar/5 transition-all duration-200"
             placeholder={lang === 'es' ? 'tu@email.com' : 'your@email.com'}
           />
         </div>
 
         <div class="flex flex-col gap-1.5">
-          <label class="text-mist/50 font-mono text-xs">
+          <label class="text-mist font-mono text-xs">
             {lang === 'es' ? 'Mensaje' : 'Message'}
           </label>
           <textarea

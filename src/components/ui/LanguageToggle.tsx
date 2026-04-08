@@ -25,9 +25,9 @@ export default function LanguageToggle() {
                  border border-mid/30 text-mist text-xs font-mono font-medium
                  hover:border-stellar hover:text-stellar transition-all duration-200"
     >
-      <span className={lang === 'es' ? 'text-stellar' : 'text-mist/50'}>ES</span>
-      <span className="text-mid/50">/</span>
-      <span className={lang === 'en' ? 'text-stellar' : 'text-mist/50'}>EN</span>
+      <span className={lang === 'es' ? 'text-stellar' : 'text-mist/80'}>ES</span>
+      <span className="text-mist/60">/</span>
+      <span className={lang === 'en' ? 'text-stellar' : 'text-mist/80'}>EN</span>
     </button>
   );
 }
